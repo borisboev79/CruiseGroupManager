@@ -25,4 +25,6 @@ public class CruiseLine extends BaseEntity{
 
     @OneToMany(mappedBy = "cruiseLine", targetEntity = Ship.class)
     private Set<Ship> ships;
+
+
 }

@@ -36,7 +36,7 @@ public class Group extends BaseEntity {
     @Column(name = "total-pax", nullable = false)
     private Integer totalPax;
 
-    @OneToMany(mappedBy = "cabin", targetEntity = Guest.class)
+    @OneToMany
     private List<Guest> guests;
 
 

@@ -36,6 +36,7 @@ public class Guest extends BaseEntity{
     @Column(name = "passport-number")
     private String passportNumber;
 
-    @ManyToOne
+    @ManyToOne(targetEntity = Cabin.class)
     private Cabin cabin;
+
 }
