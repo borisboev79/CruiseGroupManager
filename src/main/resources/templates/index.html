@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:include="~{fragments/head}"></div>
+    <title>Shopping list</title>
+</head>
+<body>
+    <header>
+        <nav th:replace="~{fragments/navbar}"></nav>
+    </header>
+    <main>
+        <div class="container bg-blur rounded mt-5 ">
+            <h1>Crusit Group Management Application</h1>
+            <hr class="my-3 bg-white w-50"/>
+            <p class="h4">The application is here to help us manage our cruise groups.</p>
+            <hr class="my-3 bg-white w-75" />
+            <h3>
+                <a class="text-primay" th:href="@{/auth/login}">Login</a>
+                if you have an account or
+                <a class="text-primay" th:href="@{/auth/register}">Register</a>
+                now and check our deals.
+            </h3>
+        </div>
+    </main>
+    <footer th:replace="~{fragments/footer}"></footer>
+</body>
+</html>
