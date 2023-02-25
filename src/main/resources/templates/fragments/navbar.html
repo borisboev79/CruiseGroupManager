@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
   <a class="navbar-brand" href="/"><img alt="car picture" src="/images/car.png" class="logo"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -12,22 +17,22 @@
         <a class="nav-link" th:href="@{/groups/all}">All Groups</a>
       </li>
 
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown" sec:authorize="isAuthenticated()">
         <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button"
            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Group Management
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
           <a class="dropdown-item" th:href="@{/groups/add}">Add Group</a>
           <a class="dropdown-item" th:href="@{/groups/delete}">Delete Group</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" th:href="@{/auth/modify}">Modify User</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" th:href="@{/auth/register}">Register Employee</a>
+      <li class="nav-item" sec:authorize="isAuthenticated()">
+        <a class="nav-link" th:href="@{/auth/register}" >Register Employee</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" sec:authorize="isAuthenticated()">
         <div class="form-inline my-2 my-lg-0 border px-3">
           <div class="logged-user"
                text="Welcome, Gosho"></div>
@@ -35,7 +40,7 @@
         </div>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item" sec:authorize="!isAuthenticated()" >
         <a class="nav-link" th:href="@{/auth/login}">Login</a>
       </li>
 
