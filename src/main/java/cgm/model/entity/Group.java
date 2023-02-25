@@ -30,14 +30,14 @@ public class Group extends BaseEntity {
     @Column(nullable = false, name ="image-url")
     private String imageUrl;
 
-    @ManyToOne
-    private Ship ship;
-
     @Column(name = "total-pax", nullable = false)
     private Integer totalPax;
 
     @OneToMany
     private List<Guest> guests;
+
+    @ManyToOne
+    private UserEntity employee;
 
 
 

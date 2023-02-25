@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
-    <meta charset="UTF-8">
-    <title>Crusit GrouMan</title>
+       <meta charset="UTF-8">
+    <title>MobiLeLeLe</title>
     <link rel="stylesheet" href="/css/reset-css.css"/>
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="/css/main.css"/>
@@ -14,7 +14,7 @@
 <body>
 
 <div>
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
         <a class="navbar-brand" href="/"><img alt="car picture" src="/img/car.png" class="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,21 +25,24 @@
             <ul class="navbar-nav mr-auto col-12 justify-content-between">
                 <li class="nav-item"
                     >
-                    <a class="nav-link" href="/brands/all">All Groups</a>
+                    <a class="nav-link" href="/brands/all">All Brands</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/offers/all">All Groups</a>
+                    <a class="nav-link" href="/offers/add">Add Offer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/offers/all">All Offers</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Group Management
+                        Admin
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/">Add Group</a>
-                        <a class="dropdown-item" href="/">Delete Group</a>
+                        <a class="dropdown-item" href="/">Action</a>
+                        <a class="dropdown-item" href="/">Another action</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/">Delete User</a>
+                        <a class="dropdown-item" href="/">Something else here</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -62,18 +65,40 @@
     </nav>
 </div>
 
-<div class="row">
-    <div class="col-sm-6 mb-3 mb-sm-0">
-<div class="card">
-<div clas="card-body">
-        <h2>Welcome to Crusit Group Management Application</h2>
-</div>
-</div>
-</div>
-</div>
-<div>
-    <footer> </footer>
-</div>
+<div class="container">
+    <h2 class="text-center text-white m-3">All Brands</h2>
+    <div class='row mb-4 d-flex justify-content-around'>
+        <div  class="brand-section col-md-5 mr-auto d-flex flex-column">
+            <h2>Car brand:
+                <span >Brand name</span>
+            </h2>
+            <div>Models:
+                <table>
+                    <tr>
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Start Year</th>
+                        <th>End Year</th>
+                        <th>Picture</th>
+                    </tr>
+                    <tr>
+                        <th>No</th>
+                        <th >Model Name</th>
+                        <th >Model Category</th>
+                        <th >Model Start Year</th>
+                        <th >Model End Year</th>
+                        <th><img alt="image" src="/"
+                                 class="img-thumbnail rounded"></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
 
+    <div>
+             <footer> </footer>
+    </div>
+</div>
 </body>
 </html>
