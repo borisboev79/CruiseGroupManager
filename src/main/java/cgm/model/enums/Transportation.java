@@ -1,9 +1,9 @@
 package cgm.model.enums;
 
 public enum Transportation {
-    BUS("автобус"),
-    AIRPLANE("самолет"),
-    CAR("собствен транспорт");
+    BUS("Bus"),
+    AIRPLANE("Airplane"),
+    CAR("Car");
 
     public final String label;
 

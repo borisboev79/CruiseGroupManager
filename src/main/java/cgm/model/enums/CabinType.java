@@ -4,10 +4,10 @@ import lombok.Getter;
 
 @Getter
 public enum CabinType {
-    INSIDE("Вътрешна"),
-    OUTSIDE("Външна"),
-    BALCONY("Балкон"),
-    SUITE("Апартамент");
+    INSIDE("Inside"),
+    OUTSIDE("Outside"),
+    BALCONY("Balcony"),
+    SUITE("Suite");
 
     public final String label;
 

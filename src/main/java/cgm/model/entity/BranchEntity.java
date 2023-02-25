@@ -15,6 +15,9 @@ import java.util.Set;
 @Table(name="branches")
 public class BranchEntity extends BaseEntity {
 
+    @Column(nullable = false)
+    private String name;
+
     @Enumerated(EnumType.STRING)
     private BranchCode code;
 

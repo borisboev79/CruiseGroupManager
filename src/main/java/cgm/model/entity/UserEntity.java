@@ -3,7 +3,7 @@ package cgm.model.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Set;
+import java.util.List;
 
 @Getter
 @Setter
@@ -27,7 +27,7 @@ public class UserEntity extends BaseEntity {
     private String lastName;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    private Set<RoleEntity> role;
+    private List<RoleEntity> role;
 
     @ManyToOne(optional = false)
     private BranchEntity branch;

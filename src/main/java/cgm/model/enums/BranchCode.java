@@ -1,6 +1,7 @@
 package cgm.model.enums;
 
 public enum BranchCode {
+    HEAD,
     BLGD,
     PDV,
     BUR,
