@@ -31,7 +31,11 @@ public class BeanConfiguration {
                 usernameParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_USERNAME_KEY).
                 passwordParameter(UsernamePasswordAuthenticationFilter.SPRING_SECURITY_FORM_PASSWORD_KEY).
                 defaultSuccessUrl("/groups/all", true).
-                failureForwardUrl("/auth/login-error");
+                failureForwardUrl("/auth/error")
+                .and()
+                .logout()
+                .logoutSuccessUrl("/auth/logout")
+                .permitAll();
 
         return http.build();
     }
